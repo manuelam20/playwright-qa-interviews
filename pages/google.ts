@@ -2,7 +2,9 @@ import { Page, expect } from '@playwright/test';
 
 export enum GoogleHomePageSelectors {
   searchInput = 'input[type="text"][title="Search"]',
-  searchButton = 'input[value="Google Search"]',
+  
+  // Problem 1: define the selector for the "Google Search" button
+  searchButton = '',
 }
 
 export default class GoogleHomePage {
@@ -10,7 +12,7 @@ export default class GoogleHomePage {
   page: Page;
   
   constructor(page: Page) {
-    this.baseUrl = 'https://google.com/'
+    this.baseUrl = 'https://google.com/';
     this.page = page;
   };
 
@@ -19,8 +21,7 @@ export default class GoogleHomePage {
   };
 
   searchForText = async (searchText: string) => {
-    await this.page.type(GoogleHomePageSelectors.searchInput, searchText);
-    await this.page.click(GoogleHomePageSelectors.searchButton);
+    // Problem 2: Write a function that searches for the provided searchText argument
   };
 
   validateSearchResultExists = async (link: string) => {
