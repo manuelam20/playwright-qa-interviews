@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 
-const TELEVET_URL = 'https://televet.com/';
+const TELEVET_URL = 'https://www.teaminternational.com/';
 
-test('search for "TeleVet"', async ({ page }) => {
-  // Problem 3: Write a test that searches for 'TeleVet' and validate that you see the expected search result
+test('search for "TeamInternational"', async ({ page }) => {
+  // Problem 3: Write a test that searches for 'TeamInternational' and validate that you see the expected search result
 });
