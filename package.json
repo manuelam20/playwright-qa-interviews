@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "npx playwright test --headed googleSearch"
+  },
   "dependencies": {
     "@playwright/test": "^1.20.0"
   }
